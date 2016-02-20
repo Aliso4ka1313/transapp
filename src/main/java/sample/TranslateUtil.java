@@ -8,11 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Arrays;
 
-/**
- * Created by dm on 20.02.16.
- */
 public class TranslateUtil {
 
     public static String translate(String stringToTranslate){
@@ -37,9 +33,17 @@ public class TranslateUtil {
        /*for (Rate rate : json.query.results.rate) {
            System.out.println(rate.id + "=" + rate.Rate);
        }*/
-        //String newString = new String(Arrays.toString(json.text).getBytes("Cp1251"), "UTF-8");
-        String newString = new String(Arrays.toString(json.text));
-
+        //String newString = new String(Arrays.toString(json.text).getBytes("Cp1251"), "UTF-8"); - for Windows
+        String newString = "";
+        // Checking if json.text contains some data
+        if (json.text != null && json.text.length > 0) {
+            StringBuilder sb = new StringBuilder();
+            for (String s : json.text) sb.append(s);
+            newString = sb.toString();
+        }
+       //String newString = new String(Arrays.toString(json.text));
+        /*String newString = "";
+        for (String s : json.text) newString += s;*/
 
 
         System.out.println(newString);

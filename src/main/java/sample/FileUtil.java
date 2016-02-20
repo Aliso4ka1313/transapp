@@ -2,25 +2,19 @@ package sample;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.jar.Pack200;
 
-/**
- * Created by mit_OK! on 23.03.2015.
- */
+
 public class FileUtil {
     public static String readFromFile(){
-        String FilePath = "/home/dm/IdeaProjects/transapp/src/main/resources/texttotranslate.txt";
+        String FilePath = "./src/main/resources/texttotranslate.txt";
         StringBuilder sb = new StringBuilder();
         File file = new File(FilePath);
         FileReader reader = null;
         try {
             reader = new FileReader(file);
-
             BufferedReader buffer = new BufferedReader(reader);
-
             String line;
             while ((line = buffer.readLine()) != null) {
-
                 sb.append(line);
             }
         } catch (IOException e) {
@@ -35,12 +29,9 @@ public class FileUtil {
         FileReader reader = null;
         try {
             reader = new FileReader(file);
-
             BufferedReader buffer = new BufferedReader(reader);
-
             String line;
             while ((line = buffer.readLine()) != null) {
-
                 sb.append(line);
             }
         } catch (IOException e) {
@@ -54,7 +45,6 @@ public class FileUtil {
         FileReader reader = null;
         try {
             reader = new FileReader(file);
-
             BufferedReader buffer = new BufferedReader(reader);
             String line;
             while ((line = buffer.readLine()) != null) {
@@ -68,11 +58,11 @@ public class FileUtil {
     }
 
     public static  void writeToFile(String textToWrite){
-        String filePath = "/home/dm/IdeaProjects/transapp/src/main/resources/translatedtext.txt";
+        String filePath = "./src/main/resources/translatedtext.txt";
         Boolean addToEnd = true;
         try {
             FileWriter writer = new FileWriter(filePath, addToEnd);
-            writer.write(textToWrite);
+            writer.write(textToWrite + "\n");
             writer.flush();
             writer.close();
         } catch (IOException e) {

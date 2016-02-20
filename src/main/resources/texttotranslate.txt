@@ -1,1 +1,1 @@
-it is raining cats and dogs
+Java is a programming language.
