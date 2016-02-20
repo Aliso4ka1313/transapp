@@ -17,11 +17,15 @@ import java.util.Arrays;
 
 
 public class Main {
-   public static void main(String[] args)throws Exception {
+    private static String stringToTranslate;
 
-    String request = "https://translate.yandex.net/api/v1.5/tr.json/translate?" +
+    public static void main(String[] args)throws Exception {
+
+        stringToTranslate = "cat dog tree mouse";
+
+        String request = "https://translate.yandex.net/api/v1.5/tr.json/translate?" +
             "key=trnsl.1.1.20151016T210027Z.f1498ea6c752d7c2.dc3680491a3da4c00477f69fc49a87641516ef24" +
-            "&text=cat dog tree mouse" +
+                "&text=" + stringToTranslate +
             "&lang=en-ru" +
             "&format=plain";
 
