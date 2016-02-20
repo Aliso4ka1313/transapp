@@ -1,0 +1,10 @@
+translate retrieving - to new Thread
+[это дождь кошек и собак] - how remove [] , format
+
+input text to translate from GUI - swing, javafx
+
+web - jsp, jsf,spring
+
+users - profile
+security autorization autentification
+users translation history
