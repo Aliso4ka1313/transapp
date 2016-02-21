@@ -8,7 +8,7 @@ public class SwingView  extends JFrame{
     public SwingView(){
         setSize(500,500);
         setTitle("Transapp");
-        //this.setContentPane(jPanel);
+
         JPanel jPanel = new JPanel();
         JButton translateButton = new JButton("Translate");
         JTextArea originText = new JTextArea("Text to translate");
