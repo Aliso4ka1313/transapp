@@ -2,7 +2,12 @@ translate retrieving - to new Thread
 [это дождь кошек и собак] - how remove [] , format
 
 input text to translate from GUI - swing, javafx
-
+Swing:
+- add dropdown list for langs options
+- add language options button
+- menu bar for opening and saving files (JFileChooser)
+- CardLayout for cards with words
+- add text to speech function  https://github.com/IonicaBizau/text-to-speech
 web - jsp, jsf,spring
 
 users - profile
