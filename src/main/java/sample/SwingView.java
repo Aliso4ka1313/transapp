@@ -17,6 +17,7 @@ public class SwingView  extends JFrame{
         jPanel.add(translateButton);
         jPanel.add(originText);
         setVisible(true);
+
     }
 
     public static void main(String[] args) {
